@@ -2,6 +2,8 @@ const dob = document.querySelector("#dob");
 const luckyNo = document.querySelector("#luckyNo");
 const check = document.querySelector("#check");
 const display = document.querySelector("#msg");
+const notice = document.querySelector("#notice");
+
 function getSumOfDob(dob){
     dob = dob.replaceAll("-","");
      let sum = 0;
@@ -41,14 +43,13 @@ function getAns(){
  
     // console.log(a);
     else if(a%numb == 0){
-        displaymsg("Yay It's a Lucky Number 💯",1)
-    }
+        displaymsg("Yay It's a Lucky Number 💯",1);
+        notice.innerText = "Privacy Notice! We are not storing your data.";
+        }
     else{
         displaymsg("Your number is not lucky.It won't define our luck 💯.You can try next time",1);
+        notice.innerText = "Privacy Notice! We are not storing your data.";
     }
 
 }
-check.addEventListener('click',getAns);
-window.onbeforeunload = function() {
-    return "Data will be lost if you leave the page.Data is not being stored at our end.";
-  };
+
