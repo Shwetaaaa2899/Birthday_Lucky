@@ -23,7 +23,7 @@ function displaymsg(msg,flag){
         display.style.color = 'black';
     }
     
-}
+};
 function getAns(){
 
     let birth = dob.value;
@@ -52,4 +52,5 @@ function getAns(){
     }
 
 };
+check.addEventListener('click',getAns);
 
