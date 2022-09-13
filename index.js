@@ -11,22 +11,40 @@ function getSumOfDob(dob){
      }
      return sum;
 }
+function displaymsg(msg,flag){
+    if(flag == 0){
+        display.innerText = msg;
+        display.style.color = 'red';
+    }
+    else{
+        display.innerText = msg;
+        display.style.color = 'black';
+    }
+    
+}
 function getAns(){
 
     let birth = dob.value;
     let numb = luckyNo.value;
     const a = getSumOfDob(birth);
-    if(birth.length == 0 || numb.length == 0){
-        display.innerText = "Kindly enter a valid value";
+    if(birth.length == 0  && numb.length == 0 ){
+        displaymsg("Birthday and lucky number values are blank,its is not valid",0);
+    }
+        else if(birth.length == 0 ){
+        displaymsg("Birthday  value is balnk , it is not valid",0);
+    }
+
+        else if( numb.length == 0){
+        displaymsg("Number value is blank, it is not valid ",0);
     }
     // console.log(birth,numb);
  
     // console.log(a);
     else if(a%numb == 0){
-        display.innerText = "Yay It's a Lucky Number 💯"
+        displaymsg("Yay It's a Lucky Number 💯",1)
     }
     else{
-        display.innerText = "It won't define our luck 💯.You can try next time";
+        displaymsg("Your number is not lucky.It won't define our luck 💯.You can try next time",1);
     }
 
 }
