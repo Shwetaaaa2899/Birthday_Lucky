@@ -52,4 +52,4 @@ function getAns(){
     }
 
 };
-notice.innerText = "Privacy Notice! We are not storing your data.";
+
