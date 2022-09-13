@@ -44,12 +44,12 @@ function getAns(){
     // console.log(a);
     else if(a%numb == 0){
         displaymsg("Yay It's a Lucky Number 💯",1);
-        notice.innerText = "Privacy Notice! We are not storing your data.";
+      
         }
     else{
         displaymsg("Your number is not lucky.It won't define our luck 💯.You can try next time",1);
-        notice.innerText = "Privacy Notice! We are not storing your data.";
+        
     }
 
-}
-
+};
+notice.innerText = "Privacy Notice! We are not storing your data.";
