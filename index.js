@@ -49,3 +49,6 @@ function getAns(){
 
 }
 check.addEventListener('click',getAns);
+window.onbeforeunload = function() {
+    return "Data will be lost if you leave the page.Data is not being stored.";
+  };
